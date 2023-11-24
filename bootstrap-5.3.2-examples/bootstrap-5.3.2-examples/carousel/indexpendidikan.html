@@ -148,7 +148,7 @@
         L.Control.Legend = L.Control.extend({
             onAdd: function (map) {
                 var img = L.DomUtil.create('img');
-                img.src = '../../../assets/img/legend/3.png';
+                img.src = 'legendamerah.jpeg';
                 img.style.width = '200px';
                 return img;
             }
@@ -319,7 +319,7 @@
             var incidents = L.geoJson(data, {
                 pointToLayer: function (feature, latlng) {
                     var marker = L.marker(latlng);
-                    marker.bindPopup('Jne' + feature.properties.date_rec + '<br/>' + 'Reported waste type: ' + feature.properties.waste_type + '<br/>' + 'Located on land type: ' + feature.properties.land_type);
+                    marker.bindPopup('Nama Sekolah:' + feature.properties.namobj);
                     return marker;
                 },
                 onEachFeature: function (feature, layer) {
